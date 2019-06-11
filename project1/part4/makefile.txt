@@ -1,0 +1,24 @@
+edit : main1.o part1.o main2.o part2.o main3.o part3.o main4.o part4.o
+	gcc -o part1 main1.o part1.o -lpthread
+	gcc -o part2 main2.o part2.o -lpthread
+	gcc -o part3 main3.o part3.o -lpthread
+	gcc -o part4 main4.o part4.o -lpthread
+	
+main4.o : main4.c part4.h
+	gcc -c main4.c
+part4.o : part4.c part4.h
+	gcc -c part4.c
+main3.o : main3.c part3.h
+	gcc -c main3.c
+part3.o : part3.c part3.h
+	gcc -c part3.c
+main2.o : main2.c part2.h
+	gcc -c main2.c
+part2.o : part2.c part2.h
+	gcc -c part2.c
+main1.o : main1.c part1.h
+	gcc -c main1.c
+part1.o : part1.c part1.h
+	gcc -c part1.c
+clean :
+	rm main1.o part1.o main2.o part2.o main3.o part3.o main4.o part4.o

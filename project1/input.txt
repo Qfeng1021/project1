@@ -1,0 +1,8 @@
+ls -a -n -i
+ps -l -a
+ip neighbor
+route -v
+date
+sleep 5
+bad command
+sleep 3
